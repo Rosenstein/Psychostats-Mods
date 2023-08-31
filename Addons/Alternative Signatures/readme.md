@@ -1,5 +1,5 @@
-# **Code provided here is untested and is provided AS IS.**
-
+**Code provided here is untested and is provided AS IS.**
+------------------------------
 
 # Alternative Signatures
 ~~```http://www.psychostats.com/community/browse/Addons/55```~~
