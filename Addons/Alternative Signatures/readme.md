@@ -1,7 +1,8 @@
+# **Code provided here is untested and is provided AS IS.**
+
+
 # Alternative Signatures
-
 ~~```http://www.psychostats.com/community/browse/Addons/55```~~
-
 
 ### DOWNLOADS:
 ```
@@ -109,7 +110,7 @@ http://yoursite.com/stats/sig/sig_1_2.png
 
 Version: 1.5
 
----------------------------
+\---------------------------
 
 Author: 3D-GRAF a.k.a F1NAL
 
