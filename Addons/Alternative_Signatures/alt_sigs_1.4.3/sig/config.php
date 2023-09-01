@@ -7,7 +7,7 @@
 $psycho = "3.1";
 
 // LANGUAGE
-$lang = "ru";
+$lang = "en";
 
 // ENABLE SERVER NAME
 $servername = true;
