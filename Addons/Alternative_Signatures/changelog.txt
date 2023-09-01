@@ -1,0 +1,75 @@
+xx/xx/xxxx xx:xx
+1.5 version released!
+- Added cups on signatures for 1st, 2nd and 3rd place
+- Added arrow which shows player's rank relatively to his previous rank
+- SQL queries optimized (queries are reduced from 9 to 4)
+- Rank, servername and hits are now aligned to the right border
+- Fixed ability to use "png" files of weapon pictures
+- Fixed bug, when player has 0 place
+- Added FreeType diagnostic to installer
+
+06/08/2008 00:15
+1.4.3 version released!
+- Added mini version of signature
+- Added server name to the signature (optional in config.php)
+- Changed and rewrited js code
+- Changed html templates for new features
+- Installer's images updated
+
+15/07/2008 23:45
+1.4.2 version released!
+- Fixed bug with unknown variable in functions.php
+- Changed skin and phrases to show longer numbers
+
+22/06/2008 14:45
+1.4.1 version released!
+- Fixed bug when sig isn't showing, because of player's shots = 0
+
+14/06/2008 16:45
+1.4 version released!
+- Mozilla Firefox is now supported
+- BBCODE is written in 1 line
+- Fixed highlighting function in Firefox
+- Hits are now written instead of Damage
+- Added percentage of Hits
+- Fixed bug when using smaller weapon images then 79x25 or different from .gif extension (thx 2mryoung)
+- Fixed bug with detecting mod_rewrite support
+- Added weapon's image extension to config file
+- Added loading image when changing color
+
+23/05/2008 19:15
+1.3 version released!
+- Added NOHTACCESS version
+- Rewrited install file
+- Great numbers are seperated with comma now
+
+09/05/2008 15:30
+1.2 version released!
+- Added checking for .htaccess support into install file
+- Fixed bug with wrong online time count
+- Fixed bug with different table names (added $difftables)
+
+
+04/05/2008 15:50
+1.1 version released!
+- New template structure
+- Added debug mode
+- Deleted unuseful functions
+
+21/04/2008 23:40
+1.0 version released!
+- Fixed bug with undefined $template
+- Since now images are cached by browser for 30 minutes
+- Added color choose feature
+- Fixed bug with wrong mods paths
+- Better BBCODE
+- Added "%" symbol in "Accuracy"
+
+20/04/2008 16:40
+0.9 version released!
+- Fixed bug with flag
+- Added other Psychostats Versions support
+- Rewrited install file
+
+17/04/2008 15:45:52
+First public release
