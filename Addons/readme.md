@@ -1,0 +1,1 @@
+Addons are extra programs or scripts other users have made that hook into the PsychoStats database in order to display new stats or information.
