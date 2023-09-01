@@ -8,7 +8,7 @@ $lang02['ru'] = "Откройте/создайте файл .htaccess в пап�
 $lang03['en'] = "Add these lines in .htaccess at the beginning: (on a blank line)";
 $lang03['ru'] = "Добавьте эти строки в .htaccess в самом начале: (на чистой строке)";
 
-if (isset($_POST['ver']) == "3.1") {
+if (isset($_POST['ver']) AND $_POST['ver'] == "3.1") {
 $lang04['en'] = "Open player_profile.html file in ";
 $lang04['ru'] = "Откройте player_profile.html, расположенный в ";
 } else {
@@ -28,7 +28,7 @@ $lang07['ru'] = "Теперь страницы игроков должны вы�
 $lang08['en'] = "Don't forget to remove install directory!";
 $lang08['ru'] = "Не забудьте удалить установочную директорию!";
 
-if (isset($_POST['ver']) == "3.1") {
+if (isset($_POST['ver']) AND $_POST['ver'] == "3.1") {
 $lang09['en'] = "Open overall.js file in";
 $lang09['ru'] = "Откройте overall.js, расположенный в";
 } else {

@@ -1,5 +1,5 @@
 <?php
-if ($_POST['htaccess'] == "on") {
+if (isset($_POST['htaccess']) == "on") {
 	$steps = "3";
 } else {
 	$steps = "2";
@@ -7,7 +7,7 @@ if ($_POST['htaccess'] == "on") {
 echo "<br><center><span class=\"title\">".$lang01[$_POST['lang']]." ($steps ".$lang10[$_POST['lang']].")</span></center><br><br>";
 
 // FIRST STEP
-if ($_POST['htaccess'] == "on") {
+if (isset($_POST['htaccess']) == "on") {
 	echo "<div class=\"step\">".$lang02[$_POST['lang']]."(".$_POST['address'].")<br>";
 	echo $lang03[$_POST['lang']];
 	echo "<br><br><textarea name=\"code\" rows=\"8\" style=\"width: 600px;\" onclick=\"this.select();\" readonly>";
@@ -56,7 +56,7 @@ echo "<textarea name=\"code2\" rows=\"18\" style=\"width: 600px;\" onclick=\"thi
 	</div>
 	<div class=\"row\">
 		<label><#Signature#>:</label>
-		<p><a href=\"player.php?id={\$plr.plrid}\"><img alt=\"\" id=\"signature\" src=\"sig/"; if ($_POST['htaccess'] == "on") echo "sig_{\$plr.plrid}_1.png\">"; else echo "index.php?id={\$plr.plrid}&template=1\">";
+		<p><a href=\"player.php?id={\$plr.plrid}\"><img alt=\"\" id=\"signature\" src=\"sig/"; if (isset($_POST['htaccess']) == "on") echo "sig_{\$plr.plrid}_1.png\">"; else echo "index.php?id={\$plr.plrid}&template=1\">";
 		echo "</a>
 		</p>
 	</div>
@@ -64,7 +64,7 @@ echo "<textarea name=\"code2\" rows=\"18\" style=\"width: 600px;\" onclick=\"thi
 		<label><#BBCODE#>:</label>
 
 <p><textarea name=\"clipboard\" id=\"clipboard\" rows=\"1\" style=\"width: 350px; height: 40px;\" onclick=\"this.select();\" wrap=\"off\" >
-[url=".$_POST['address']."player.php?id={\$plr.plrid}][img]".$_POST['address'].""; if ($_POST['htaccess'] == "on") echo "sig/sig_{\$plr.plrid}_1.png"; else echo "sig/index.php?id={\$plr.plrid}&template=1";
+[url=".$_POST['address']."player.php?id={\$plr.plrid}][img]".$_POST['address'].""; if (isset($_POST['htaccess']) == "on") echo "sig/sig_{\$plr.plrid}_1.png"; else echo "sig/index.php?id={\$plr.plrid}&template=1";
 echo "[/img][/url]
 &lt;/textarea&gt;</p>
 
@@ -91,7 +91,7 @@ echo "<textarea name=\"code2\" rows=\"18\" style=\"width: 600px;\" onclick=\"thi
 
 <div id=\"box_plrsignature_frame\" align=\"center\" {boxframe id='plrsignature'}>
 <div class=\"frame2\" style=\"text-align: left;\">
-	<a href=\"player.php?id={\$plr.plrid}\"><img alt=\"\" id=\"signature\" src=\""; if ($_POST['htaccess'] == "on") echo "sig/sig_{\$plr.plrid}_1.png"; else echo "sig/index.php?id={\$plr.plrid}&template=1";
+	<a href=\"player.php?id={\$plr.plrid}\"><img alt=\"\" id=\"signature\" src=\""; if (isset($_POST['htaccess']) == "on") echo "sig/sig_{\$plr.plrid}_1.png"; else echo "sig/index.php?id={\$plr.plrid}&template=1";
 	echo "\"></a>
 </div>
 	<table width=\"99%\" align=\"center\" cellspacing=\"0\" cellpadding=\"0\" border=\"0\">
@@ -122,7 +122,7 @@ echo "<textarea name=\"code2\" rows=\"18\" style=\"width: 600px;\" onclick=\"thi
 	</table>
 <div class=\"frame2\" style=\"text-align: left;\">
 <p><textarea name=\"clipboard\" id=\"clipboard\" rows=\"1\" style=\"width: 350px; height: 40px;\" onclick=\"this.select();\" wrap=\"off\" >
-[url=".$_POST['address']."player.php?id={\$plr.plrid}][img]".$_POST['address']."";if ($_POST['htaccess'] == "on") echo "sig/sig_{\$plr.plrid}_1.png"; else echo "sig/index.php?id={\$plr.plrid}&template=1";
+[url=".$_POST['address']."player.php?id={\$plr.plrid}][img]".$_POST['address']."";if (isset($_POST['htaccess']) == "on") echo "sig/sig_{\$plr.plrid}_1.png"; else echo "sig/index.php?id={\$plr.plrid}&template=1";
 echo "[/img][/url]
 &lt;/textarea&gt;</p>
 </div>
@@ -152,7 +152,7 @@ function showopts(id) {
 	
 	if (size == false) size = \"\";
 	";
-	if ($_POST['htaccess'] == "on") {
+	if (isset($_POST['htaccess']) == "on") {
 	echo "if (size == true) size = \"_mini\";"; 
 	} else {
 	echo "if (size == true) size = \"&mini=true\";";
@@ -160,11 +160,11 @@ function showopts(id) {
 	echo "
 	
 	img.src = \"sig/img/loading.gif\";
-	img.src = \""; if ($_POST['htaccess'] == "on") echo "sig/sig_\" + id + \"_\" + choice + size + \".png\";"; else echo "sig/index.php?id=\" + id + \"&template=\" + choice + size + \"\";";
+	img.src = \""; if (isset($_POST['htaccess']) == "on") echo "sig/sig_\" + id + \"_\" + choice + size + \".png\";"; else echo "sig/index.php?id=\" + id + \"&template=\" + choice + size + \"\";";
 	
 	echo "
 	
-	element.value = \"[url=".$_POST['address']."player.php?id=\" + id + \"][img]".$_POST['address'].""; if ($_POST['htaccess'] == "on") echo "sig/sig_\" + id + \"_\" + choice + size + \".png"; else echo "sig/index.php?id=\" + id + \"&template=\" + choice + size + \"";
+	element.value = \"[url=".$_POST['address']."player.php?id=\" + id + \"][img]".$_POST['address'].""; if (isset($_POST['htaccess']) == "on") echo "sig/sig_\" + id + \"_\" + choice + size + \".png"; else echo "sig/index.php?id=\" + id + \"&template=\" + choice + size + \"";
 	echo "[/img][/url]\";
 	element.select();
 }";
