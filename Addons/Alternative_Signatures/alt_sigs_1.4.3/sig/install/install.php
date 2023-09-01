@@ -135,7 +135,7 @@ if (empty($_POST['ver'])) {
 	echo "</tr>";
 	echo "<tr><td></td><td class=\"site\">Auto-Defined: ".$server.$ps."</td>";
 	echo "</tr>";
-	echo "<tr><td>Language:</td><td><select name=\"lang\" style=\"width: 250px;\"><option value=\"en\">English<option value=\"ru\">Russian</select></td>";
+	echo "<tr><td>Language:</td><td><select name=\"lang\" style=\"width: 250px;\"><option value=\"en\">English<option value=\"ru\">Russian<option value=\"rs\">Srpski</select></td>";
 	echo "</tr>";
 	echo "<tr><td>Your Psychostats version:</td><td><select name=\"ver\" style=\"width: 250px;\"><option value=\"3.1\">>= 3.1<option value=\"Other\">Other</select></td>";
 	echo "</tr>";
