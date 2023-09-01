@@ -1,0 +1,1 @@
+Themes allow you to change the look of your stats website.
