@@ -14,11 +14,11 @@ function gdVersion() {
     $phpinfo = strip_tags($phpinfo);
 	$phpinfo = preg_replace("/[^\.0-9]/", "", $phpinfo);
 	
-    if (ereg(".*([0-9]+)\.([0-9]+)\.([0-9]+).*", $phpinfo, $r)) {
+    if (preg_match("@.*([0-9]+)\.([0-9]+)\.([0-9]+).*@", $phpinfo, $r)) {
         $phpinfo=$r[1].".".$r[2].".".$r[3];
-    } elseif (ereg(".*([0-9]+)\.([0-9]+).*", $phpinfo, $r)) {
+    } elseif (preg_match("@.*([0-9]+)\.([0-9]+).*@", $phpinfo, $r)) {
     	$phpinfo=$r[1].".".$r[2].".0";
-    } elseif (ereg(".*([0-9]+).*", $phpinfo, $r)) {
+    } elseif (preg_match("@.*([0-9]+).*@", $phpinfo, $r)) {
     	$phpinfo=$r[1].".0.0";
     } else {
     	$phpinfo=0;
@@ -116,7 +116,7 @@ if ($mr == 1) {
 }
 
 echo "<table><tr><td></td><td class=\"plugin\">Alternative Signatures for PsychoStats</td>";
-echo "<tr><td></td><td class=\"desc\">Version: 1.4.3</td></tr>";
+echo "<tr><td></td><td class=\"desc\">Version: 1.5</td></tr>";
 
 echo "<tr><td><img src=\"$gds.png\"></td><td class=\"plugin\">GD Version: $gd</td></tr>";
 echo "<tr><td></td><td class=\"desc\">GD support is necessary to create signatures.</td></tr>";
