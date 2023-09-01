@@ -1,41 +1,41 @@
 <?php
 $lang01['en'] = "Installing manual";
-$lang01['ru'] = "Èíñòðóêöèÿ ïî óñòàíîâêå";
+$lang01['ru'] = "Ð˜Ð½ÑÑ‚Ñ€ÑƒÐºÑ†Ð¸Ñ Ð¿Ð¾ ÑƒÑÑ‚Ð°Ð½Ð¾Ð²ÐºÐµ";
 
 $lang02['en'] = "Open/create .htaccess file in your PsychoStats directory ";
-$lang02['ru'] = "Îòêðîéòå/ñîçäàéòå ôàéë .htaccess â ïàïêå PsychoStats ";
+$lang02['ru'] = "ÐžÑ‚ÐºÑ€Ð¾Ð¹Ñ‚Ðµ/ÑÐ¾Ð·Ð´Ð°Ð¹Ñ‚Ðµ Ñ„Ð°Ð¹Ð» .htaccess Ð² Ð¿Ð°Ð¿ÐºÐµ PsychoStats ";
 
 $lang03['en'] = "Add these lines in .htaccess at the beginning: (on a blank line)";
-$lang03['ru'] = "Äîáàâüòå ýòè ñòðîêè â .htaccess â ñàìîì íà÷àëå: (íà ÷èñòîé ñòðîêå)";
+$lang03['ru'] = "Ð”Ð¾Ð±Ð°Ð²ÑŒÑ‚Ðµ ÑÑ‚Ð¸ ÑÑ‚Ñ€Ð¾ÐºÐ¸ Ð² .htaccess Ð² ÑÐ°Ð¼Ð¾Ð¼ Ð½Ð°Ñ‡Ð°Ð»Ðµ: (Ð½Ð° Ñ‡Ð¸ÑÑ‚Ð¾Ð¹ ÑÑ‚Ñ€Ð¾ÐºÐµ)";
 
 if (isset($_POST['ver']) == "3.1") {
 $lang04['en'] = "Open player_profile.html file in ";
-$lang04['ru'] = "Îòêðîéòå player_profile.html, ðàñïîëîæåííûé â ";
+$lang04['ru'] = "ÐžÑ‚ÐºÑ€Ð¾Ð¹Ñ‚Ðµ player_profile.html, Ñ€Ð°ÑÐ¿Ð¾Ð»Ð¾Ð¶ÐµÐ½Ð½Ñ‹Ð¹ Ð² ";
 } else {
 $lang04['en'] = "Open block_plrsessions.html file in ";
-$lang04['ru'] = "Îòêðîéòå block_plrsessions.html, ðàñïîëîæåííûé â ";
+$lang04['ru'] = "ÐžÑ‚ÐºÑ€Ð¾Ð¹Ñ‚Ðµ block_plrsessions.html, Ñ€Ð°ÑÐ¿Ð¾Ð»Ð¾Ð¶ÐµÐ½Ð½Ñ‹Ð¹ Ð² ";
 }
 
 $lang05['en'] = "Add these lines at the ending: (on a blank line)";
-$lang05['ru'] = "Äîáàâüòå ýòè ñòðîêè â ñàìîì êîíöå: (íà ÷èñòîé ñòðîêå)";
+$lang05['ru'] = "Ð”Ð¾Ð±Ð°Ð²ÑŒÑ‚Ðµ ÑÑ‚Ð¸ ÑÑ‚Ñ€Ð¾ÐºÐ¸ Ð² ÑÐ°Ð¼Ð¾Ð¼ ÐºÐ¾Ð½Ñ†Ðµ: (Ð½Ð° Ñ‡Ð¸ÑÑ‚Ð¾Ð¹ ÑÑ‚Ñ€Ð¾ÐºÐµ)";
 
 $lang06['en'] = "Alternative Signatures MOD is installed now!";
-$lang06['ru'] = "Alternative Signatures óñòàíîâëåí!";
+$lang06['ru'] = "Alternative Signatures ÑƒÑÑ‚Ð°Ð½Ð¾Ð²Ð»ÐµÐ½!";
 
 $lang07['en'] = "Your player's pages should now look like this:";
-$lang07['ru'] = "Òåïåðü ñòðàíèöû èãðîêîâ äîëæíû âûãëÿäåòü òàê:";
+$lang07['ru'] = "Ð¢ÐµÐ¿ÐµÑ€ÑŒ ÑÑ‚Ñ€Ð°Ð½Ð¸Ñ†Ñ‹ Ð¸Ð³Ñ€Ð¾ÐºÐ¾Ð² Ð´Ð¾Ð»Ð¶Ð½Ñ‹ Ð²Ñ‹Ð³Ð»ÑÐ´ÐµÑ‚ÑŒ Ñ‚Ð°Ðº:";
 
 $lang08['en'] = "Don't forget to remove install directory!";
-$lang08['ru'] = "Íå çàáóäüòå óäàëèòü óñòàíîâî÷íóþ äèðåêòîðèþ!";
+$lang08['ru'] = "ÐÐµ Ð·Ð°Ð±ÑƒÐ´ÑŒÑ‚Ðµ ÑƒÐ´Ð°Ð»Ð¸Ñ‚ÑŒ ÑƒÑÑ‚Ð°Ð½Ð¾Ð²Ð¾Ñ‡Ð½ÑƒÑŽ Ð´Ð¸Ñ€ÐµÐºÑ‚Ð¾Ñ€Ð¸ÑŽ!";
 
 if (isset($_POST['ver']) == "3.1") {
 $lang09['en'] = "Open overall.js file in";
-$lang09['ru'] = "Îòêðîéòå overall.js, ðàñïîëîæåííûé â";
+$lang09['ru'] = "ÐžÑ‚ÐºÑ€Ð¾Ð¹Ñ‚Ðµ overall.js, Ñ€Ð°ÑÐ¿Ð¾Ð»Ð¾Ð¶ÐµÐ½Ð½Ñ‹Ð¹ Ð²";
 } else {
 $lang09['en'] = "Open webcore.js file in";
-$lang09['ru'] = "Îòêðîéòå webcore.js, ðàñïîëîæåííûé â";
+$lang09['ru'] = "ÐžÑ‚ÐºÑ€Ð¾Ð¹Ñ‚Ðµ webcore.js, Ñ€Ð°ÑÐ¿Ð¾Ð»Ð¾Ð¶ÐµÐ½Ð½Ñ‹Ð¹ Ð²";
 }
 
 $lang10['en'] = "steps";
-$lang10['ru'] = "øàãà";
+$lang10['ru'] = "ÑˆÐ°Ð³Ð°";
 ?>
