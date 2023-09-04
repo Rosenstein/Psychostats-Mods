@@ -60,16 +60,15 @@ function modrewrite() {
     return($phpinfo);
 }
 ?>
-
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
 <title>INSTALL: Alternative Signature for PsychoStats</title>
 <LINK REL="StyleSheet" HREF="install.css" TYPE="text/css">
 </head>
-<html>
 
-<table class="main" cellpadding=15 cellspacing=0><tr><td background="logo.gif" height=151>
-</td></tr></tr><td>
+<table class="main" cellpadding=15 cellspacing=0><tr><td><img src="logo.gif" width="796" height="151">
+</td></tr><tr><td>
 
 <?php
 // CURRETLY PATH
@@ -115,33 +114,34 @@ if ($mr == 1) {
 	$mrs = "false";
 }
 
-echo "<table><tr><td></td><td class=\"plugin\">Alternative Signatures for PsychoStats</td>";
-echo "<tr><td></td><td class=\"desc\">Version: 1.5</td></tr>";
+echo "<center><a href=\"$url\">Reload page</a></center>\r\n";
+echo "<table><tr><td></td><td class=\"plugin\">Alternative Signatures for PsychoStats</td>\r\n";
+echo "<tr><td></td><td class=\"desc\">Version: 1.5</td></tr>\r\n";
 
-echo "<tr><td><img src=\"$gds.png\"></td><td class=\"plugin\">GD Version: $gd</td></tr>";
-echo "<tr><td></td><td class=\"desc\">GD support is necessary to create signatures.</td></tr>";
+echo "<tr><td><img src=\"$gds.png\"></td><td class=\"plugin\">GD Version: $gd</td></tr>\r\n";
+echo "<tr><td></td><td class=\"desc\">GD support is necessary to create signatures.</td></tr>\r\n";
 
-echo "<tr><td><img src=\"$fts.png\"></td><td class=\"plugin\">FreeType Support: $ft</td></tr>";
-echo "<tr><td></td><td class=\"desc\">FreeType Library is necessary to work with fonts.</td></tr>";
+echo "<tr><td><img src=\"$fts.png\"></td><td class=\"plugin\">FreeType Support: $ft</td></tr>\r\n";
+echo "<tr><td></td><td class=\"desc\">FreeType Library is necessary to work with fonts.</td></tr>\r\n";
 
-echo "<tr><td><img src=\"$mrs.png\"></td><td class=\"plugin\">mod_rewrite</td></tr>";
-echo "<tr><td></td><td class=\"desc\">mod_rewrite support is necessary to use \"htaccess\" version.</td></tr>";
-echo "<tr><td></td><td class=\"text\">";
+echo "<tr><td><img src=\"$mrs.png\"></td><td class=\"plugin\">mod_rewrite</td></tr>\r\n";
+echo "<tr><td></td><td class=\"desc\">mod_rewrite support is necessary to use \"htaccess\" version.</td></tr>\r\n";
+echo "<tr><td></td><td class=\"text\">\r\n";
 
 if (empty($_POST['ver'])) {
-	echo "<center><table>";
-	echo "<form action=\"install.php\" method=\"POST\">";
-	echo "<tr><td>Your psychostats address:</td><td><input type=\"text\" name=\"address\" style=\"width: 250px;\" value=\"$server$ps\"></td>";
-	echo "</tr>";
-	echo "<tr><td></td><td class=\"site\">Auto-Defined: ".$server.$ps."</td>";
-	echo "</tr>";
-	echo "<tr><td>Language:</td><td><select name=\"lang\" style=\"width: 250px;\"><option value=\"en\">English<option value=\"ru\">Russian<option value=\"sv\">Svenska</select></td>";
-	echo "</tr>";
-	echo "<tr><td>Your Psychostats version:</td><td><select name=\"ver\" style=\"width: 250px;\"><option value=\"3.1\">3.1<option value=\"Other\">Other</select></td>";
-	echo "</tr>";
-	echo "<tr><td>\"htaccess\" version:</td><td><input type=checkbox name=\"htaccess\" checked></td>";
-	echo "</tr></table>";
-	echo "<input type=\"submit\" value=\"Next\"></form></center>";
+	echo "<center><table>\r\n";
+	echo "<form action=\"install.php\" method=\"POST\">\r\n";
+	echo "<tr><td>Your psychostats address:</td><td><input type=\"text\" name=\"address\" style=\"width: 250px;\" autocomplete=\"on\"  value=\"$server$ps\"></td>\r\n";
+	echo "</tr>\r\n";
+	echo "<tr><td></td><td class=\"site\">Auto-Defined: ".$server.$ps."</td>\r\n";
+	echo "</tr>\r\n";
+	echo "<tr><td>Language:</td><td><select name=\"lang\" style=\"width: 250px;\"><option value=\"en\">English<option value=\"ru\">Russian<option value=\"sv\">Svenska</select></td>\r\n";
+	echo "</tr>\r\n";
+	echo "<tr><td>Your Psychostats version:</td><td><select name=\"ver\" style=\"width: 250px;\"><option value=\"3.1\">3.1<option value=\"Other\">Other</select></td>\r\n";
+	echo "</tr>\r\n";
+	echo "<tr><td>\"htaccess\" version:</td><td><input type=checkbox name=\"htaccess\" checked></td>\r\n";
+	echo "</tr></table>\r\n";
+	echo "<input type=\"submit\" value=\"Next\"></form></table></center>\r\n";
 } else {
 	$last = substr($_POST['address'], strlen($_POST['address']) - 1, 1);
 	if ($last != "/") {
