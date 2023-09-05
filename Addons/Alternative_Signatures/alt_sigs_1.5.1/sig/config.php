@@ -1,0 +1,50 @@
+<?php
+// CONFIGURATION FILE
+// ALTERNATIVE SIGNATURES FOR PSYCHOSTATS
+// BY F1NAL
+
+// PSYCHOSTATS VERSION (3.1 or another)
+$psycho = "3.1";
+
+// LANGUAGE en=English ru=Russia sv=Swedish 
+$lang = "sv";
+
+// ENABLE SERVER NAME
+$servername = true;
+
+// SERVER NAME TEXT (32 SYMBOLS MAXIMUM)
+$servernametext = "Text Goes Here";
+
+// DEBUG
+$debug = true;
+
+// TURN IT ON, IF YOU HAVE OLD TABLE NAMES
+$difftables = false;
+
+// EXTENSION OF FLAG IMAGES (".gif", ".png", ".webp")
+$flag_ext = ".webp";
+
+// EXTENSION OF WEAPON IMAGES (".gif", ".png", ".webp")
+$weapon_ext = ".gif";
+
+// CACHE TIME (IN SECONDS)
+$expireTime = 1800;
+
+// TITLE TEXT COLOR
+$text_color_title = "#FFFFFF";
+
+// TEXT COLOR
+$text_color = "#000000";
+
+// TITLE FONT
+$font_title = "fonts/arialbd.ttf";
+
+// FONT
+$font = "fonts/arial.ttf";
+
+// IMAGE WIDTH
+$image_width = 350;
+
+// IMAGE HEIGHT
+$image_height = 100;
+?>
