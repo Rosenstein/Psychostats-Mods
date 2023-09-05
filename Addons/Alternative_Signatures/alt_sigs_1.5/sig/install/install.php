@@ -83,7 +83,7 @@ $ps = substr($path, 1, strpos($path, "/sig/install/"));
 
 // INFORMATION
 require("lang.php");
-	if(isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on') {
+	if(isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' || $_SERVER['SERVER_PORT'] == 443) {
 		$https = "https://";}
 	else {
 		$https = "http://";}
