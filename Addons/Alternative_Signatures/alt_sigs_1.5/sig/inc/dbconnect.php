@@ -1,6 +1,6 @@
 <?php
 // MYSQL CONNECT
-$dbcnx = @mysql_connect($dbhost,$dbuser,$dbpass);
+$dbcnx = @mysqli_connect($dbhost,$dbuser,$dbpass);
 if (!$dbcnx)
 {
 	echo "MySQL connection failed";
@@ -8,11 +8,11 @@ if (!$dbcnx)
 }
 
 // CHOOSING DB
-if (!@mysql_select_db($dbname, $dbcnx)) 
+if (!@mysqli_select_db($dbcnx, $dbname)) 
 {
 	echo "DB connection failed";
 	die;
 } else {
-	mysql_query("SET NAMES 'utf8'");
+	mysqli_query($dbcnx, "SET NAMES 'utf8'");
 }
 ?>
