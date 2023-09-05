@@ -178,7 +178,8 @@ echo "<h2><b><u>".$lang08[$_POST['lang']]."</u></b></h2><br><br>";
 echo "<div align=right><i>Author: 3D-GRAF a.k.a F1NAL<br>
 E-mail: denkil92@mail.ru<br>
 ICQ#: 751306</i><br>
-<i>Swedish text: TheAnkA!!</i></div>
+<i>Swedish text: TheAnkA!!</i><br>
+<i>Update 1.5 to work in new PHP: Rosenstein</i></div>
 
 </td></tr></table>";
 ?>

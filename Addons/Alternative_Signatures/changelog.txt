@@ -1,3 +1,22 @@
+--- Rosenstein ---
+
+
+Version 1.5.1 (in progress)
+* [Added] Ability to use "png|gif|webp" files for flag pictures
+* [Added] Ability to use "png|gif|webp" files for weapon pictures
+* [Added] HTTPS detection for $server variable
+* [Added] Serbian language
+* [Fixed] PHP & MySQL functions to work in PHP 7.
+
+--- TheAnkA!! ---
+
+
+* [Added] Swedish text
+* [Added] that your website is default on installation page
+
+--- 3D-GRAF a.k.a F1NAL ---
+
+
 xx/xx/xxxx xx:xx
 1.5 version released!
 - Added cups on signatures for 1st, 2nd and 3rd place
