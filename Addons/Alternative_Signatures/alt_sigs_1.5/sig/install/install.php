@@ -83,7 +83,11 @@ $ps = substr($path, 1, strpos($path, "/sig/install/"));
 
 // INFORMATION
 require("lang.php");
-$server = "http://".$_SERVER['SERVER_NAME']."/";
+	if(isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on') {
+		$https = "https://";}
+	else {
+		$https = "http://";}
+$server = $https.$_SERVER['SERVER_NAME']."/";
 
 $gd = gdVersion();
 $ft = FreeType();
