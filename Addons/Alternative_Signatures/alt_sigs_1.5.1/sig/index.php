@@ -3,7 +3,8 @@ if (!isset($_GET['template']) OR $_GET['template'] == "") $_GET['template'] = 1;
 $id = htmlspecialchars($_GET['id']);
 $template = htmlspecialchars($_GET['template']);
 $miniskin = false;
-$space = "";
+$space = "0";
+$abs_dir = __DIR__ . "/";
 
 if (isset($_GET['mini'])) $miniskin = htmlspecialchars($_GET['mini']);
 if (!empty($id)) {
@@ -92,10 +93,9 @@ if ($plr['rank'] > 0 && $plr['rank'] < 4) {
 	imagecopyresampled($img, $cup, 25, 1, 0, 0, 18, 17, 18, 17);
 	$space = 21;
 }
-
-imagettftext($img, 8, 0, 25+$space, 13, $text_color_title, $font_title, $plr['name']);
-$box = imagettfbbox(8, 0, $font_title, $lang11[$lang].": #".$plr['rank']);
-imagettftext($img, 8, 0, ceil($image_width - $box[2]) - 18, 13, $text_color_title, $font_title, $lang11[$lang].": #".$plr['rank']);
+imagettftext($img, 8, 0, 25+$space, 13, $text_color_title, $abs_dir.$font_title, $plr['name']);
+$box = imagettfbbox(8, 0, $abs_dir.$font_title, $lang11[$lang].": #".$plr['rank']);
+imagettftext($img, 8, 0, ceil($image_width - $box[2]) - 18, 13, $text_color_title, $abs_dir.$font_title, $lang11[$lang].": #".$plr['rank']);
 
 if ($plr['rank'] < $plr['prevrank']) $rank = "up";
 if ($plr['rank'] > $plr['prevrank']) $rank = "down";
@@ -104,23 +104,23 @@ if ($plr['rank'] == $plr['prevrank'] OR $plr['prevrank'] == 0) $rank = "stay";
 $rank = imagecreatefromgif("img/rank_".$rank.".gif");
 imagecopyresampled($img, $rank, 333, 1, 0, 0, 16, 16, 16, 16);
 
-imagettftext($img, 8, 0, 5, 30+2, $text_color, $font, $lang01[$lang].": ".$plr['skill']);
-imagettftext($img, 8, 0, 5, 45+2, $text_color, $font, $lang02[$lang].": ".seperate($plr['kills'], 3, ","));
-imagettftext($img, 8, 0, 5, 60+2, $text_color, $font, $lang03[$lang].": ".seperate($plr['deaths'], 3, ","));
-imagettftext($img, 8, 0, 5, 75+2, $text_color, $font, $lang04[$lang].": ".$kdrate);
-imagettftext($img, 8, 0, 5, 90+5, $text_color_title, $font, $lang10[$lang].": ".seperate($plr['shots'], 3, ","));
+imagettftext($img, 8, 0, 5, 30+2, $text_color, $abs_dir.$font, $lang01[$lang].": ".$plr['skill']);
+imagettftext($img, 8, 0, 5, 45+2, $text_color, $abs_dir.$font, $lang02[$lang].": ".seperate($plr['kills'], 3, ","));
+imagettftext($img, 8, 0, 5, 60+2, $text_color, $abs_dir.$font, $lang03[$lang].": ".seperate($plr['deaths'], 3, ","));
+imagettftext($img, 8, 0, 5, 75+2, $text_color, $abs_dir.$font, $lang04[$lang].": ".$kdrate);
+imagettftext($img, 8, 0, 5, 90+5, $text_color_title, $abs_dir.$font, $lang10[$lang].": ".seperate($plr['shots'], 3, ","));
 
-imagettftext($img, 8, 0, 120, 30+2, $text_color, $font, $lang06[$lang].": ".$plr[$hskillspct]."%");
-imagettftext($img, 8, 0, 120, 45+2, $text_color, $font, $lang05[$lang].": ".$plr['accuracy']."%");
-imagettftext($img, 8, 0, 120, 60+2, $text_color, $font, $lang08[$lang].": ".$map['uniqueid']);
-imagettftext($img, 8, 0, 120, 75+2, $text_color, $font, $lang09[$lang].": $hours:$minutes:$seconds");
+imagettftext($img, 8, 0, 120, 30+2, $text_color, $abs_dir.$font, $lang06[$lang].": ".$plr[$hskillspct]."%");
+imagettftext($img, 8, 0, 120, 45+2, $text_color, $abs_dir.$font, $lang05[$lang].": ".$plr['accuracy']."%");
+imagettftext($img, 8, 0, 120, 60+2, $text_color, $abs_dir.$font, $lang08[$lang].": ".$map['uniqueid']);
+imagettftext($img, 8, 0, 120, 75+2, $text_color, $abs_dir.$font, $lang09[$lang].": $hours:$minutes:$seconds");
 
 $hits = $lang12[$lang].": ".seperate($plr['hits'], 3, ",")." ($shrate%)";
-$box = imagettfbbox(8, 0, $font, $hits);
-imagettftext($img, 8, 0, ceil($image_width - 225), 90+5, $text_color_title, $font, $hits);
+$box = imagettfbbox(8, 0, $abs_dir.$font, $hits);
+imagettftext($img, 8, 0, ceil($image_width - 225), 90+5, $text_color_title, $abs_dir.$font, $hits);
 
-imagettftext($img, 8, 0, 261, 75+1, $text_color, $font, $lang02[$lang].": ".seperate($wpn['kills'], 3, ","));
-imagettftext($img, 8, 0, 261, 90+2, $text_color, $font, $lang06[$lang].": ".seperate($wpn['headshotkills'], 3, ","));
+imagettftext($img, 8, 0, 261, 75+1, $text_color, $abs_dir.$font, $lang02[$lang].": ".seperate($wpn['kills'], 3, ","));
+imagettftext($img, 8, 0, 261, 90+2, $text_color, $abs_dir.$font, $lang06[$lang].": ".seperate($wpn['headshotkills'], 3, ","));
 
 // SERVER NAME
 if ($servername) {
@@ -131,9 +131,9 @@ if ($servername) {
 	imagecopyresampled($img2, $serverbg, 0, $image_height, 0, 0, $image_width, 15, $image_width, 15);
 	
 	if (strlen($servernametext) > 32) $servernametext = substr($servernametext, 0, 32);
-	imagettftext($img2, 7, 0, 5, 111, $text_color, $font, $lang13[$lang].":");
-	$box = imagettfbbox(7, 0, $font_title, $servernametext);
-	imagettftext($img2, 7, 0, ceil($image_width - $box[2]) - 10, 111, $text_color, $font_title, $servernametext);
+	imagettftext($img2, 7, 0, 5, 111, $text_color, $abs_dir.$font, $lang13[$lang].":");
+	$box = imagettfbbox(7, 0, $abs_dir.$font_title, $servernametext);
+	imagettftext($img2, 7, 0, ceil($image_width - $box[2]) - 10, 111, $text_color, $abs_dir.$font_title, $servernametext);
 	
 	$img = $img2;
 }
@@ -151,4 +151,7 @@ if (!$debug)
 	imagepng($img);
 	imagedestroy($img);
 }
+//echo '<pre><b>defined_except:</b> <br><br>';
+//print_r (array_diff_key (get_defined_vars(), ['GLOBALS'=>0,'_SERVER'=>0,'_COOKIE'=>0,'_FILES'=>0]));
+//echo ' '.basename(__FILE__).':'.__LINE__.'</pre>'; #die;
 ?>
