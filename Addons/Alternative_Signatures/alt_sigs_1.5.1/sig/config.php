@@ -6,8 +6,8 @@
 // PSYCHOSTATS VERSION (3.1 or another)
 $psycho = "3.1";
 
-// LANGUAGE en=English ru=Russia sv=Swedish 
-$lang = "sv";
+// LANGUAGE en=English ru=Russia sv=Swedish rs=Srpski
+$lang = "en";
 
 // ENABLE SERVER NAME
 $servername = true;
@@ -16,7 +16,7 @@ $servername = true;
 $servernametext = "Text Goes Here";
 
 // DEBUG
-$debug = true;
+$debug = false;
 
 // TURN IT ON, IF YOU HAVE OLD TABLE NAMES
 $difftables = false;
