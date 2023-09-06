@@ -4,7 +4,7 @@ $plr = "SELECT name, accuracy, kills, deaths, hits, onlinetime, ".$hskillspct.",
 		WHERE pi.plrid = '$id' and cpd.plrid = '$id' and plr.plrid = '$id'
 		ORDER BY pi.totaluses DESC";
 
-$plr = mysqli_fetch_array(mysqli_query($dbcnx, $plr));
+$plr = mysqli_fetch_array(mysqli_query($dbcnx, $plr), MYSQLI_ASSOC);
 
 $wpn = "SELECT plr_w.weaponid, kills, headshotkills, uniqueid
 		FROM ".$dbtblprefix."c_plr_weapons AS plr_w NATURAL JOIN ".$dbtblprefix."weapon
@@ -12,7 +12,7 @@ $wpn = "SELECT plr_w.weaponid, kills, headshotkills, uniqueid
 		ORDER BY kills DESC
 		LIMIT 1";
 
-$wpn = mysqli_fetch_array(mysqli_query($dbcnx, $wpn));
+$wpn = mysqli_fetch_array(mysqli_query($dbcnx, $wpn), MYSQLI_ASSOC);
 
 $map = "SELECT cpm.mapid, uniqueid
 		FROM ".$dbtblprefix."c_plr_maps AS cpm NATURAL JOIN ".$dbtblprefix."map
@@ -20,11 +20,11 @@ $map = "SELECT cpm.mapid, uniqueid
 		ORDER BY kills desc
 		LIMIT 1";
 
-$map = mysqli_fetch_array(mysqli_query($dbcnx, $map));
+$map = mysqli_fetch_array(mysqli_query($dbcnx, $map), MYSQLI_ASSOC);
 
 $etc = "SELECT cc, value
 		FROM ".$dbtblprefix."plr_profile AS plr_profile JOIN ".$dbtblprefix."config AS config
 		WHERE plr_profile.uniqueid = '".$plr['uniqueid']."' and config.var = 'modtype'";
 
-$etc = mysqli_fetch_array(mysqli_query($dbcnx, $etc));
+$etc = mysqli_fetch_array(mysqli_query($dbcnx, $etc), MYSQLI_ASSOC);
 ?>

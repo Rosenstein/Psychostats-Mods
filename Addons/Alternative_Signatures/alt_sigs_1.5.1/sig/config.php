@@ -16,7 +16,7 @@ $servername = true;
 $servernametext = "Text Goes Here";
 
 // DEBUG
-$debug = false;
+$debug = 0;
 
 // TURN IT ON, IF YOU HAVE OLD TABLE NAMES
 $difftables = false;
