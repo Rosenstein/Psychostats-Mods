@@ -1,4 +1,5 @@
 <?php
+error_reporting(E_ALL);
 if (!isset($_GET['template']) OR $_GET['template'] == "") $_GET['template'] = 1;
 $id = htmlspecialchars($_GET['id']);
 $template = htmlspecialchars($_GET['template']);
@@ -151,7 +152,8 @@ if (!$debug)
 	imagepng($img);
 	imagedestroy($img);
 }
-//echo '<pre><b>defined_except:</b> <br><br>';
-//print_r (array_diff_key (get_defined_vars(), ['GLOBALS'=>0,'_SERVER'=>0,'_COOKIE'=>0,'_FILES'=>0]));
-//echo ' '.basename(__FILE__).':'.__LINE__.'</pre>'; #die;
+if ($debug) {
+echo "<pre><b>defined_except: 'GLOBALS','_SERVER','_COOKIE','_FILES'</b><br><br>";
+print_r (array_diff_key (get_defined_vars(), ['GLOBALS'=>0,'_SERVER'=>0,'_COOKIE'=>0,'_FILES'=>0]));
+echo ' '.basename(__FILE__).':'.__LINE__.'</pre>';}
 ?>
