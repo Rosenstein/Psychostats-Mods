@@ -4,7 +4,7 @@ function gdVersion() {
     phpinfo(8);
     $phpinfo = ob_get_contents();
     ob_end_clean();
-    $phpinfo = stristr($phpinfo, "gd version");
+    stristr($phpinfo, "gd version") ? $phpinfo = stristr($phpinfo, "gd version") : $phpinfo = stristr($phpinfo, "gd library version");
     $phpinfo = stristr($phpinfo, "version");
 
     $end = strpos($phpinfo, "</tr>");
