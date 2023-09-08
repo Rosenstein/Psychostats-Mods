@@ -68,7 +68,7 @@ $text_color = imagecolorallocate($img, $text_color[0], $text_color[1], $text_col
 if (!empty($wpn['uniqueid'])) {
 	
 	// ADDING WEAPON IMAGE
-	$weaponimgpath = "../$images/weapons/halflife/".$etc['value']."/".$wpn['uniqueid'];
+	$weaponimgpath = "../$images/weapons/".$gametype['value']."/".$etc['value']."/".$wpn['uniqueid'];
 	
 	if ($weapon_ext == ".gif") $weapon = imagecreatefromgif($weaponimgpath.$weapon_ext);
 	if ($weapon_ext == ".png") $weapon = imagecreatefrompng($weaponimgpath.$weapon_ext);
