@@ -2,6 +2,7 @@
 
 
 Version 1.5.1 (in progress)
+* [Changed] Mod will now work for Source games
 * [Added] Ability to use "png|gif|webp" files for flag pictures
 * [Added] Ability to use "png|gif|webp" files for weapon pictures
 * [Added] HTTPS detection for $server variable
