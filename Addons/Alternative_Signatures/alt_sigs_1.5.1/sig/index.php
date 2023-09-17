@@ -149,8 +149,9 @@ if ($miniskin) {
 
 // ENDING
 if (!$debug)
-	imagepng($img);
-	imagedestroy($img);
+	imagepng($img, null,$quality=0);
+	imagedestroy($img); // PHP7
+	if (isset($img)) unset($img); // PHP8
 }
 if ($debug) {
 echo "<pre><b>defined_except: 'GLOBALS','_SERVER','_COOKIE','_FILES'</b><br><br>";
