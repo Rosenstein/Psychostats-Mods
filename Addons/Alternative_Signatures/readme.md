@@ -19,9 +19,10 @@ Mon, 21 Apr 2008 - alt_sigs_1.0.zip 918.87 KB - (v1.0)
 Sun, 20 Apr 2008 - alt_sigs_0.9.zip 917.90 KB - (v0.9)
 Thu, 17 Apr 2008 - alt_sigs_0.8.zip 916.29 KB - (v0.8)
 ```
-### SCREENSHOTS: (~~click for larger view~~)
+### SCREENSHOTS: (click for larger view)
 
-~~```(IMG:http://www.psychostats.com/community/img/ss/00055/tn-bb021a0d851e866312b48a3e8c7d606e.png)```~~
+![image](https://github.com/user-attachments/assets/24f65661-0ec8-4409-93b1-801c95cab023)
+
 
 
 
